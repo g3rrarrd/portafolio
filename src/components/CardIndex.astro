@@ -1,0 +1,13 @@
+---
+import type { CardIndexProps } from "../interfaces/interface";
+const {title, title_en, description, description_en } = Astro.props as CardIndexProps;
+---
+
+<section>
+    <h2>
+        <span data-lang="es">{title}</span>
+        <span data-lang="en" class="hidden">{title_en}</span>
+    </h2>
+    <p data-lang="es">{description}</p>
+    <p data-lang="en">{description_en}</p>
+</section>

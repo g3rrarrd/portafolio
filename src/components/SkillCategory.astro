@@ -1,0 +1,44 @@
+---
+import type { Skills } from "../interfaces/interface";
+
+interface Props {
+    name: string
+    name_en: string
+    skills: Skills
+}
+
+const {name, name_en, skills } = Astro.props;
+---
+
+<section id="'skills">
+    <h2 data-lang="es">{name}</h2>
+    <h2 data-lang="en">{name_en}</h2>
+
+    <div>
+
+        {Object.entries(skills).map(([c,s]) => (
+            <div>
+                <h3>{c}</h3>
+                <div>
+                    {
+                        s
+                        .slice()
+                        .sort((a,b) => b.level - a.level)
+                        .map((skill, index) => (
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-sm font-medium">{skill.name}</span>
+                                <meter min="0" max="100" value={skill.level} low="20" optimum="50" high="100"></meter>
+                                <p>{skill.level}%</p>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                <div class="bg-red-600 h-2.5 rounded-full" style={`width: ${skill.level}%`}></div>
+                            </div>
+                        </div>
+                    ))
+                    }
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

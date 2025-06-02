@@ -1,11 +1,62 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import CardIndex from '../components/CardIndex.astro';
+import Social from '../components/Social.astro';
+import SkillCategory from '../components/SkillCategory.astro';
+
+import { socials, cards, skills } from '../content/data/db'
+
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	tittle="Gerardo Rodriguez - Developer full stack & Data analist"
+	description = "Conoce a Gerardo Rodriguez, entusiasta en desarrollo full stack y analista de datos"
+>
+
+	<div>
+		<div>
+			<Image
+				src="/images/foto.jpg"
+				alt="Gerardo Rodriguez"
+				width={200}
+				height={200}
+			/>
+			<h1> Gerardo Rodriguez</h1>
+			<p> Entusiasta en desarrollo full stack y analista de datos</p>
+		</div>
+
+		<div>
+			{
+				cards.map((card, index) => (
+					<CardIndex 
+						title={card.title}
+						title_en={card.title_en}
+						description={card.description}
+						description_en={card.description_en}
+					/>
+				))
+			}
+
+			<SkillCategory 
+				name='Habilidades'
+				name_en='Skills'
+				skills={skills}
+			/>
+		</div>
+		
+		<div>
+			{
+				socials.map((social, index) => {
+					<Social 
+						name={social.name}
+						url={social.url}
+						icon={social.icon}
+					/>
+				})
+			}
+		</div>
+	</div>
+	
 </Layout>

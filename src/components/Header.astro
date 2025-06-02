@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<header>
+    <div>
+        <div>
+            <div>
+                <Image
+                    src="/images/foto.jpg"
+                    alt="Gerardo Rodriguez"
+                    width={50}
+                    height={50}
+                />
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-black-800">Gerardo Rodriguez</h1>
+                <p class="text-sm text-gray-600">Entusiata en desarrollador full stack y analista de datos </p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">EdTech</span>
+            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">Data Governance</span>
+            <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">ML & GenIA</span>
+            <div class="flex items-center">
+              <span class="mr-2 text-sm font-medium text-gray-900">ES</span>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="languageToggle" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-500"></div>
+              </label>
+              <span class="ml-2 text-sm font-medium text-gray-900">EN</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    import "../scripts/languageToggle.js";
+</script>
