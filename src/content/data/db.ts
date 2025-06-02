@@ -31,57 +31,26 @@ export const cards: CardIndexProps[] = [
 export const skills: Skills = {
     Frontend: [
         { name: "JavaScript", level: 60 },
-        { name: "TailwindCSS", level: 60 },
-        { name: "React", level: 60 },
-        { name: "Astro.js", level: 50 },
-        { name: "Next.js", level: 50 },
+        { name: "React", level: 40 },
+        { name: "Astro.js", level: 10 },
+        { name: "Next.js", level: 40 },
     ],
     Backend: [
         { name: "Python", level: 70 },
-        { name: "C#", level: 70 },
-        { name: "FastAPI", level: 80 },
-        { name: "SimPy", level: 75 },
-        { name: "Azure Functions", level: 80 },
-        { name: "Logic Apps", level: 80 },
-        { name: "Azure Platform", level: 70 },
+        { name: "RestAPI", level: 65 },
+        { name: "SimPy", level: 30 },
+        { name: "Java", level: 80 },
     ],
-    "Data Engineering": [
-        { name: "SQL", level: 85 },
-        { name: "Data Factory", level: 80 },
-        { name: "Databricks", level: 80 },
-        { name: "Synapse", level: 60 },
-        { name: "SSIS", level: 70 },
-        { name: "Pandas", level: 80 },
-        { name: "PySpark", level: 80 },
-        { name: "DBT", level: 50 },
-    ],
-    "AI & ML": [
-        { name: "EDA", level: 70 },
-        { name: "Supervised ML", level: 70 },
-        { name: "Unsupervised ML", level: 70 },
-        { name: "Time Series", level: 70 },
-        { name: "NLP", level: 60 },
-        { name: "GenAI", level: 70 },
-        { name: "RAG", level: 50 },
+    "Data Analist": [
+        { name: "SQL", level: 75 },
+        { name: "Pandas", level: 70 },
+        { name: "Excel", level: 60 },
     ],
     Databases: [
-      { name: "Vector Databases", level: 50 },
-      { name: "MSSQL", level: 70 },
-      { name: "Azure SQL", level: 70 },
       { name: "MySQL", level: 70 },
-      { name: "PostgreSQL", level: 70 },
-      { name: "MongoDB", level: 70 },
-      { name: "Azure Queue Storage", level: 80 },
-      { name: "Service Bus", level: 80 },
-      { name: "Data Lake", level: 80 },
-      { name: "Lake House", level: 80 },
-      { name: "Data Warehouse", level: 80 },
-    ],
-    DevOps: [
-        { name: "Azure DevOps", level: 50 },
-        { name: "Docker", level: 60 },
-        { name: "Kubernetes", level: 50 },
-        { name: "Terraform", level: 60 },
+      { name: "Data Warehouse", level: 60 },
+      { name: "SQL server", level: 40},
+      { name: "Oracle", level: 60},
     ],
 }
 
@@ -96,15 +65,11 @@ export const navItems: ItemProps[] = [
       titleEn: 'Projects',
       href: '/projects',
       subitems: [
-        { titleEs: 'ML', titleEn: 'ML', href: '/projects/machine-learning' },
-        { titleEs: 'Integración de Apps RAG', titleEn: 'RAG Apps Integration', href: '/projects/rag' },
-        { titleEs: 'Infraestructura Azure', titleEn: 'Azure Infrastructure', href: '/projects/azure' },
-        { titleEs: 'Ingeniería de Datos', titleEn: 'Data Engineering', href: '/projects/data-engineering' },
-        { titleEs: 'Productos Digitales', titleEn: 'Digital Products', href: '/projects/digital-products' },
-        { titleEs: 'LMS y SIS', titleEn: 'LMS and SIS', href: '/projects/lms-sis' },
+        { titleEs: 'Spootify', titleEn: 'ML', href: '/projects/machine-learning' },
+        { titleEs: 'Tienda', titleEn: 'RAG Apps Integration', href: '/projects/rag' },
+        { titleEs: 'Lenguaje', titleEn: 'Azure Infrastructure', href: '/projects/azure' },
       ]
-    },
-    { titleEs: 'Experiencia Laboral', titleEn: 'Work Experience', href: '/workexperience' },
+    }
 ];
 
 /** WORK EXPERIENCE */
